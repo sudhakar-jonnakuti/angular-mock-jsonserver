@@ -1,0 +1,131 @@
+<div class="page-content page-container" id="page-content">
+  <div class="padding">
+    <div class="row container d-flex justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <form
+          [formGroup]="editForm"
+          (ngSubmit)="onSubmit()"
+          class="card"
+          novalidate
+          autocomplete="off">
+          <h5 class="card-title fw-400">Edit User</h5>
+
+          <div class="card-body">
+            <!-- Name -->
+            <div class="form-group">
+              <input
+                class="form-control"
+                formControlName="name"
+                type="text"
+                placeholder="Name"
+                [ngClass]="{
+                  'is-invalid':
+                    fc['name'].invalid &&
+                    (fc['name'].dirty || fc['name'].touched),
+                  'is-valid':
+                    fc['name'].valid && (fc['name'].dirty || fc['name'].touched)
+                }" />
+              <div
+                class="invalid-feedback"
+                *ngIf="
+                  fc['name'].errors && (fc['name'].dirty || fc['name'].touched)
+                ">
+                <p *ngIf="fc['name'].errors['required']">Name is required</p>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <input
+                class="form-control"
+                formControlName="email"
+                type="text"
+                placeholder="Email"
+                [ngClass]="{
+                  'is-invalid':
+                    fc['email'].invalid &&
+                    (fc['email'].dirty || fc['email'].touched),
+                  'is-valid':
+                    fc['email'].valid &&
+                    (fc['email'].dirty || fc['email'].touched)
+                }" />
+              <div
+                class="invalid-feedback"
+                *ngIf="
+                  fc['email'].errors &&
+                  (fc['email'].dirty || fc['email'].touched)
+                ">
+                <p *ngIf="fc['email'].errors['required']">Email is required</p>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                rows="4"
+                placeholder="Address"
+                formControlName="address"
+                [ngClass]="{
+                  'is-invalid':
+                    fc['address'].invalid &&
+                    (fc['address'].dirty || fc['address'].touched),
+                  'is-valid':
+                    fc['address'].valid &&
+                    (fc['address'].dirty || fc['address'].touched)
+                }"></textarea>
+              <div
+                class="invalid-feedback"
+                *ngIf="
+                  fc['address'].errors &&
+                  (fc['address'].dirty || fc['address'].touched)
+                ">
+                <p *ngIf="fc['address'].errors['required']">
+                  Address is required
+                </p>
+              </div>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+              <input
+                class="form-control"
+                type="tel"
+                formControlName="phone"
+                placeholder="Phone Number"
+                [ngClass]="{
+                  'is-invalid':
+                    fc['phone'].invalid &&
+                    (fc['phone'].dirty || fc['phone'].touched),
+                  'is-valid':
+                    fc['phone'].valid &&
+                    (fc['phone'].dirty || fc['phone'].touched)
+                }" />
+              <div
+                class="invalid-feedback"
+                *ngIf="
+                  fc['phone'].errors &&
+                  (fc['phone'].dirty || fc['phone'].touched)
+                ">
+                <p *ngIf="fc['phone'].errors['required']">Phone is required</p>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              [disabled]="!editForm.valid"
+              class="btn btn-block btn-bold btn-primary">
+              Edit User
+            </button>
+            <button
+              type="button"
+              (click)="onReset()"
+              class="btn btn-block btn-bold btn-secondary">
+              Reset User
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

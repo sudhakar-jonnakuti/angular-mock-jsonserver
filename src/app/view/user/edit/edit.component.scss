@@ -1,0 +1,98 @@
+.card {
+  border: 0;
+  border-radius: 0px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.03);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.padding {
+  padding: 3rem !important;
+}
+
+h5.card-title {
+  font-size: 15px;
+}
+
+.fw-400 {
+  font-weight: 400 !important;
+}
+
+.card-title {
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 0;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(77, 82, 89, 0.07);
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  border-color: #ebebeb;
+  border-radius: 2px;
+  color: #8b95a5;
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: inherit;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.card-body > *:last-child {
+  margin-bottom: 0;
+  width: 100%;
+  display: block;
+}
+
+.card-body > *:nth-last-child(2) {
+  margin-bottom: 5px;
+  width: 100%;
+  display: block;
+}
+
+.btn-primary {
+  color: #fff;
+}
+
+.btn-bold {
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.btn-primary:hover {
+  color: #fff;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.form-control:focus {
+  color: #4d5259;
+  -webkit-box-shadow: 0 0 0 0.1rem rgba(51, 202, 187, 0.15);
+  box-shadow: 0 0 0 0.1rem rgba(51, 202, 187, 0.15);
+}
+
+.custom-radio {
+  cursor: pointer;
+}
+
+.custom-control {
+  display: -webkit-box;
+  display: flex;
+  min-width: 18px;
+}

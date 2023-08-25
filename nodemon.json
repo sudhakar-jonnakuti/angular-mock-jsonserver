@@ -1,0 +1,7 @@
+{
+  "watch": [
+    "server"
+  ],
+  "ext": ".js",
+  "exec": "npm run server:generator && npm run server:json-server"
+}

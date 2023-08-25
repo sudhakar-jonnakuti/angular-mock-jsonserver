@@ -1,0 +1,45 @@
+.modal-header,
+.modal-body,
+.modal-footer {
+  padding: 15px 30px;
+}
+
+.modal-footer {
+  background: #ecf0f1;
+  border-radius: 0 0 3px 3px;
+}
+
+.modal-title {
+  display: inline-block;
+}
+
+.form-control {
+  border-radius: 2px;
+  box-shadow: none;
+  border-color: #dddddd;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+.btn {
+  border-radius: 2px;
+  min-width: 100px;
+}
+
+button.close {
+  border: 0;
+  background-color: transparent;
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+}
+
+form label {
+  font-weight: normal;
+}
